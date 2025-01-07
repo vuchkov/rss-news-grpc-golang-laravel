@@ -7,10 +7,13 @@ import (
 )
 
 func TestParse(t *testing.T) {
-	urls := []string{"https://example.com/rss"}
+	urls := []string{
+		"https://rss.cnn.com/rss/cnn_topstories.rss",
+		// "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+	}
 	items, err := Parse(urls)
 	if err != nil {
-		t.Fatalf("Error occurred: %v", err)
+		t.Fatalf("Expected no error, got %v", err)
 	}
 	if len(items) == 0 {
 		t.Fatal("Expected items, got none")

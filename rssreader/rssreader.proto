@@ -1,0 +1,24 @@
+// gRPC Protocol Definition (rssreader.proto)
+syntax = "proto3";
+package rssreader;
+
+service RssService {
+    rpc ParseUrls(ParseRequest) returns (ParseResponse);
+}
+
+message ParseRequest {
+    repeated string urls = 1;
+}
+
+message RssItem {
+    string title = 1;
+    string source = 2;
+    string source_url = 3;
+    string link = 4;
+    string publish_date = 5;
+    string description = 6;
+}
+
+message ParseResponse {
+    repeated RssItem items = 1;
+}
