@@ -2,9 +2,22 @@
 
 This Go package can be used to parse multiple RSS feed URLs asynchronously.
 
-### **Golang RSS Reader Service**
-This service will be a simple API to handle requests for parsing RSS URLs.
+### Usage
 
-#### **Step 1: Define the HTTP server**
+1. Initialize the Module
 
-Create a new file, `main.go` for the HTTP server.
+Ensure you are in the `rssreader/` directory and run:
+```
+go mod init rssreader
+go mod tidy
+```
+
+2. Run the Tests
+
+Execute the test file using the go test command:
+
+```
+go test ./...
+```
+
+

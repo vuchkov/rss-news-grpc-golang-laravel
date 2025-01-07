@@ -22,14 +22,14 @@ type RssItem struct {
 
 type rssFeed struct {
     Channel struct {
-        Title string `xml:"title"
+        Title string `xml:"title"`
         Items []struct {
-            Title       string `xml:"title"
-            Link        string `xml:"link"
-            Description string `xml:"description"
-            PubDate     string `xml:"pubDate"
-        } `xml:"item"
-    } `xml:"channel"
+            Title       string `xml:"title"`
+            Link        string `xml:"link"`
+            Description string `xml:"description"`
+            PubDate     string `xml:"pubDate"`
+        } `xml:"item"`
+    } `xml:"channel"`
 }
 
 func Parse(urls []string) ([]RssItem, error) {
