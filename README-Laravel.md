@@ -7,9 +7,9 @@ cd laravel-rss-reader
 
 2. Database setup:
 
-3. Configure your database connection in `.env`.
+- Configure your database connection in `.env`.
 
-4. Create Models and Migrations:
+3. Create Models and Migrations:
 ```
 php artisan make:model RssFeed -m
 php artisan make:model RssPost -m
